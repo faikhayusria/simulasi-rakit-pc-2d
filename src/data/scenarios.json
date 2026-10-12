@@ -1,0 +1,92 @@
+[
+  {
+    "id": "scenario-office-student",
+    "title": "PC Belajar & Kantor Hemat",
+    "brief": "Klien membutuhkan sebuah unit komputer untuk kebutuhan pembelajaran daring, pengetikan skripsi, akuntansi kantor, dan pemutaran video HD. Komputer harus hemat listrik, tidak memakan banyak tempat, dan tidak melebihi anggaran ketat yang diberikan oleh pihak kampus/kantor.",
+    "budget": 8500000,
+    "difficulty": "Pemula",
+    "targetAudience": "Mahasiswa / Staf Administrasi",
+    "requiredCategories": [
+      "cpu",
+      "motherboard",
+      "ram",
+      "gpu",
+      "storage",
+      "psu",
+      "case",
+      "cooler"
+    ],
+    "performanceHints": {
+      "minRamGB": 16,
+      "needsDedicatedGpu": true,
+      "minStorageGB": 500,
+      "targetResolution": "1080p 60Hz",
+      "description": "Fokus pada efisiensi anggaran dan pendinginan yang stabil. Kapasitas RAM minimal 16GB untuk kelancaran multitasking dokumen."
+    },
+    "learningObjectives": [
+      "Memahami pemilihan prosesor hemat daya dan kecocokan socket motherboard.",
+      "Mengoptimalkan alokasi anggaran terbatas tanpa mengorbankan fungsionalitas dasar.",
+      "Menghindari pemilihan komponen daya (PSU) berlebih yang membuang anggaran."
+    ]
+  },
+  {
+    "id": "scenario-multimedia-design",
+    "title": "PC Desain Grafis & Multimedia",
+    "brief": "Seorang desainer grafis freelance membutuhkan PC untuk menjalankan aplikasi Adobe Photoshop, Illustrator, Premiere Pro, dan render visual 2D/3D ringan. Dibutuhkan kapasitas RAM besar untuk buffering kanvas resolusi tinggi serta storage NVMe cepat untuk loading aset.",
+    "budget": 17000000,
+    "difficulty": "Menengah",
+    "targetAudience": "Desainer Grafis / Editor Konten",
+    "requiredCategories": [
+      "cpu",
+      "motherboard",
+      "ram",
+      "gpu",
+      "storage",
+      "psu",
+      "case",
+      "cooler"
+    ],
+    "performanceHints": {
+      "minRamGB": 32,
+      "needsDedicatedGpu": true,
+      "minStorageGB": 1000,
+      "targetResolution": "1440p Color-Accurate",
+      "description": "Sangat direkomendasikan memilih RAM 32GB dan SSD bertipe M.2 NVMe untuk kecepatan transfer file aset grafis besar."
+    },
+    "learningObjectives": [
+      "Memilih memori berkecepatan tinggi generasi DDR5 dan motherboard yang kompatibel.",
+      "Memastikan ruang sirkulasi udara casing memadai untuk beban kerja rendering terus menerus.",
+      "Menganalisis rasio biaya terhadap performa multitasking komputasi."
+    ]
+  },
+  {
+    "id": "scenario-gaming-esports",
+    "title": "PC Gaming 1080p / 1440p High-End",
+    "brief": "Seorang gamer kompetitif menginginkan sistem gaming bertenaga tinggi untuk memainkan judul game AAA modern dan eSports dengan refresh rate tinggi. Kartu grafis bertenaga tinggi, pendingin maksimal untuk CPU performa tinggi, dan catu daya yang aman adalah prioritas utama.",
+    "budget": 24000000,
+    "difficulty": "Tantangan",
+    "targetAudience": "Gamer Antusias / Streamer",
+    "requiredCategories": [
+      "cpu",
+      "motherboard",
+      "ram",
+      "gpu",
+      "storage",
+      "psu",
+      "case",
+      "cooler"
+    ],
+    "performanceHints": {
+      "minRamGB": 32,
+      "needsDedicatedGpu": true,
+      "minStorageGB": 1000,
+      "targetResolution": "1440p / 4K Ultra Gaming",
+      "description": "Wajib menggunakan GPU performa tinggi dan PSU bersertifikasi dengan konektor daya PCIe yang memadai serta pendinginan optimal."
+    },
+    "learningObjectives": [
+      "Menghitung kalkulasi konsumsi daya total (TDP CPU + GPU) untuk memilih watt PSU yang aman.",
+      "Memeriksa dimensi fisik panjang GPU dan tinggi cooler agar pas di dalam casing.",
+      "Mengenal konektor daya modern (12-pin / PCIe) dan manajemen pendinginan cair AIO."
+    ]
+  }
+]

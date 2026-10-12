@@ -1,0 +1,106 @@
+[
+  {
+    "id": "R-SOCKET-01",
+    "name": "Kesesuaian Socket CPU & Motherboard",
+    "severity": "error",
+    "description": "Socket CPU harus identik dengan socket pada motherboard.",
+    "explanation": "Prosesor dan motherboard menggunakan tipe soket fisik tertentu (seperti AM-X atau LGA-Z). Soket yang tidak cocok memiliki jumlah pin dan konfigurasi fisik yang berbeda, sehingga prosesor tidak akan dapat terpasang dan dapat merusak pin soket jika dipaksakan.",
+    "affectedCategories": ["cpu", "motherboard"]
+  },
+  {
+    "id": "R-RAM-01",
+    "name": "Generasi Tipe RAM (DDR4 / DDR5)",
+    "severity": "error",
+    "description": "Tipe generasi RAM (DDR4/DDR5) harus didukung oleh slot motherboard.",
+    "explanation": "Memori DDR4 dan DDR5 memiliki letak takik (notch) fisik yang berbeda serta voltase operasi yang tidak sama. Motherboard yang dirancang untuk DDR4 tidak dapat dipasangi RAM DDR5, begitu pula sebaliknya.",
+    "affectedCategories": ["ram", "motherboard"]
+  },
+  {
+    "id": "R-FORM-01",
+    "name": "Kesesuaian Form Factor Motherboard di Casing",
+    "severity": "error",
+    "description": "Ukuran fisik motherboard harus didukung oleh casing.",
+    "explanation": "Casing komputer memiliki batasan ukuran motherboard yang dapat ditampung (misal Mini-ITX, Micro-ATX, atau ATX). Motherboard berukuran ATX tidak akan muat di dalam casing Micro-ATX karena kekurangan ruang dan lubang baut penyangga (standoff).",
+    "affectedCategories": ["motherboard", "case"]
+  },
+  {
+    "id": "R-GPU-01",
+    "name": "Panjang Maksimal Kartu Grafis (GPU Clearance)",
+    "severity": "error",
+    "description": "Panjang fisik kartu grafis tidak boleh melebihi ruang horizontal casing.",
+    "explanation": "Kartu grafis modern performa tinggi dengan pendingin triple-fan seringkali memiliki panjang di atas 300mm. Jika panjang GPU melebihi batas clearance casing, kartu akan membentur braket kipas depan atau panel hard drive casing.",
+    "affectedCategories": ["gpu", "case"]
+  },
+  {
+    "id": "R-COOL-01",
+    "name": "Dukungan Socket Bracket Cooler CPU",
+    "severity": "error",
+    "description": "Braket pendingin CPU harus mendukung tipe socket prosesor.",
+    "explanation": "Setiap soket prosesor memiliki jarak lubang mounting pendingin yang spesifik pada motherboard. Pendingin (cooler) harus menyertakan braket dudukan yang sesuai dengan soket CPU yang Anda gunakan agar dasar pendingin dapat menempel rapat pada heat spreader prosesor.",
+    "affectedCategories": ["cooler", "cpu"]
+  },
+  {
+    "id": "R-COOL-02",
+    "name": "Tinggi Maksimal Pendingin CPU (Cooler Height)",
+    "severity": "error",
+    "description": "Tinggi cooler tower tidak boleh melebihi batas lebar casing.",
+    "explanation": "Pendingin udara model tower memiliki sirip heatsink yang menjulang tinggi. Jika tinggi cooler melebihi batas clearance casing, penutup samping (kaca/plat) casing tidak akan dapat ditutup rapat.",
+    "affectedCategories": ["cooler", "case"]
+  },
+  {
+    "id": "R-COOL-03",
+    "name": "Kapasitas Disipasi Termal Cooler (TDP Rating)",
+    "severity": "warning",
+    "description": "Kapasitas pendinginan (TDP) cooler disarankan lebih besar atau sama dengan TDP CPU.",
+    "explanation": "Prosesor menghasilkan panas sesuai dengan nilai TDP (Thermal Design Power) saat bekerja penuh. Memasang cooler dengan kapasitas TDP lebih rendah dari prosesor dapat menyebabkan suhu panas berlebih (overheating) dan penurunan performa otomatis (thermal throttling).",
+    "affectedCategories": ["cooler", "cpu"]
+  },
+  {
+    "id": "R-PSU-01",
+    "name": "Kecukupan Daya Catu Daya (PSU Wattage)",
+    "severity": "error",
+    "description": "Total daya PSU harus mencukupi kebutuhan puncak CPU, GPU, dan komponen sistem.",
+    "explanation": "Unit Catu Daya (PSU) adalah jantung penyuplai listrik komputer. Menghitung kebutuhan daya minimal: TDP CPU + TDP GPU + 100 Watt (komponen motherboard, RAM, storage, fan) ditambah margin aman 15-20%. PSU yang kekurangan daya dapat menyebabkan PC mati mendadak atau memicu proteksi trip saat menjalankan beban berat.",
+    "affectedCategories": ["psu", "cpu", "gpu"]
+  },
+  {
+    "id": "R-PSU-02",
+    "name": "Ketersediaan Konektor Daya Eksternal GPU",
+    "severity": "error",
+    "description": "PSU harus memiliki konektor kabel daya yang dibutuhkan oleh GPU.",
+    "explanation": "Kartu grafis berdaya menengah ke atas membutuhkan pasokan daya tambahan melalui kabel konektor PCIe 8-pin atau 12-pin (12VHPWR). Jika PSU tidak menyediakan konektor tersebut, GPU tidak akan mendapatkan suplai daya yang cukup untuk beroperasi.",
+    "affectedCategories": ["psu", "gpu"]
+  },
+  {
+    "id": "R-STOR-01",
+    "name": "Dukungan Antarmuka Media Penyimpanan",
+    "severity": "error",
+    "description": "Motherboard harus menyediakan slot antarmuka media penyimpanan yang dipilih.",
+    "explanation": "SSD modern bertipe M.2 NVMe memerlukan slot M.2 khusus pada motherboard. Jika motherboard tidak memiliki slot M.2 yang tersedia, SSD tidak akan dapat dipasang ke sistem.",
+    "affectedCategories": ["storage", "motherboard"]
+  },
+  {
+    "id": "R-COMP-01",
+    "name": "Kelengkapan 8 Komponen Utama PC",
+    "severity": "error",
+    "description": "Seluruh 8 komponen esensial harus terpasang untuk menyelesaikan perakitan.",
+    "explanation": "Sebuah personal computer (PC) fungsional memerlukan seluruh 8 komponen penting: CPU (otak), Motherboard (papan utama), RAM (memori kerja), GPU (pengolah grafis), Storage (media penyimpanan data), PSU (catu daya), Casing (rumah pelindung), dan Cooler (pendingin prosesor).",
+    "affectedCategories": ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "case", "cooler"]
+  },
+  {
+    "id": "R-SCEN-01",
+    "name": "Kesesuaian Spesifikasi Terhadap Kebutuhan Skenario",
+    "severity": "warning",
+    "description": "Komponen yang dipilih sebaiknya memenuhi rekomendasi skenario pengguna.",
+    "explanation": "Skenario pengguna memberikan panduan beban kerja (misalnya RAM minimal 32GB untuk desainer, atau kapasitas penyimpanan minimal 1TB). Memilih spesifikasi di bawah panduan akan mengurangi efektivitas kinerja sistem sesuai kebutuhan skenario.",
+    "affectedCategories": ["ram", "storage", "gpu"]
+  },
+  {
+    "id": "R-BUD-01",
+    "name": "Batas Maksimal Anggaran Biaya (Budget Cap)",
+    "severity": "error",
+    "description": "Total harga seluruh komponen tidak boleh melebihi pagu anggaran skenario.",
+    "explanation": "Dalam dunia profesional perakitan komputer, efisiensi biaya adalah kunci. Seorang perakit harus mampu memilih komponen yang seimbang (*balanced build*) tanpa melampaui batas anggaran yang telah ditetapkan oleh klien.",
+    "affectedCategories": ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "case", "cooler"]
+  }
+]
